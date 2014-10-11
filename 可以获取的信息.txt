@@ -1,0 +1,4 @@
+1.节点的shortAddr和extAddr，父节点的addr
+2.判断设备类型
+3.温度值
+4.电压值

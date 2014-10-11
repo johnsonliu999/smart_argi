@@ -1,0 +1,13 @@
+1.if(SampleApp_NwkState == DEV_ROUTER)
+	device = 0x01;
+  else if (SampleApp_NwkState == DEV_END_DEVICE)
+        device = 0x02;
+  else
+        device = 0x03;  // error
+  再通过AF_DataRequest(&device)发送
+
+  接收端通过pkt->cmd.Data判断类型
+  通过pkt->srcAddr.addr.shortAddr读出短址
+
+  查看本端点短址NLME_GetShortAddr(NLMEDE.H)
+  查看父节点短址NLME_GetCoordShortAddr

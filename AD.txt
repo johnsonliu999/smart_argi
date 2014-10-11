@@ -1,0 +1,8 @@
+1.初始化io
+2.设置ADCCON3
+3.while(!(ACCON1 & 0x80));
+等待转换完成
+4.low = ADCL
+  high = ADCH
+  res = ADCL >> 4 + ADCH << 4
+  转换res / 2047 * ref
